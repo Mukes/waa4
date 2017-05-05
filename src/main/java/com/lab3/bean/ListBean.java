@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * Created by Crawlers on 5/4/2017.
  */
-@ManagedBean(name = "listBean")
+@ManagedBean
 @SessionScoped
 public class ListBean implements Serializable{
     @ManagedProperty(value = "#{accountService}")
@@ -25,27 +25,10 @@ public class ListBean implements Serializable{
     List<Account> accounts;
 
     private Account account;
-    private double depositAmt;
-    private long accountNo;
+
+
     public String listAccount(){
         return "list_account.xhtml";
-    }
-
-    public String createAccount(){
-        return "add_account.xhtml";
-    }
-
-    public String deposit(){
-        accountService.deposit(accountNo, depositAmt);
-        return "list_account.xhtml";
-    }
-
-    public String withdraw(){
-        return "withdraw.xhtml";
-    }
-
-    public String view(){
-        return "view.xhtml";
     }
 
     public List<Account> getAccounts() {
@@ -71,21 +54,5 @@ public class ListBean implements Serializable{
 
     public void setAccount(Account account) {
         this.account = account;
-    }
-
-    public double getDepositAmt() {
-        return depositAmt;
-    }
-
-    public void setDepositAmt(double depositAmt) {
-        this.depositAmt = depositAmt;
-    }
-
-    public long getAccountNo() {
-        return accountNo;
-    }
-
-    public void setAccountNo(long accountNo) {
-        this.accountNo = accountNo;
     }
 }

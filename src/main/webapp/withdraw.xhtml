@@ -8,7 +8,7 @@
 <h:body>
 
     <f:metadata>
-        <f:viewParam name="account_number" value="#{depositBean.accountNo}" />
+        <f:viewParam name="account_number" value="#{withdrawBean.accountNo}" />
     </f:metadata>
 
     <ui:composition template="template.xhtml">
@@ -16,10 +16,10 @@
 
             <h:form>
                 <h:outputText  value="#{param['id']}"></h:outputText>
-                <h:outputLabel for="deposit" styleClass="label-info">Deposit Amount:</h:outputLabel>
-                <h:inputText id="deposit" value="#{depositBean.depositAmt}" styleClass="text-input"></h:inputText>
+                <h:outputLabel for="deposit" styleClass="label">Deposit Amount:</h:outputLabel>
+                <h:inputText id="deposit" value="#{withdrawBean.depositAmt}" styleClass="text-field"></h:inputText>
                 <br />
-                <h:commandButton action="#{depositBean.deposit()}" value="Submit" styleClass="btn-info"></h:commandButton>
+                <h:commandButton action="#{withdrawBean.withdraw()}" value="Submit" styleClass="btn-default"></h:commandButton>
             </h:form>
         </ui:define>
     </ui:composition>
