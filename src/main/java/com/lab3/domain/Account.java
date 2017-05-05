@@ -9,6 +9,9 @@ public class Account {
 	Customer customer;
 	double balance;
 
+	public Account() {
+	}
+
 	public Account (long accountnr){
 		this.accountnumber = accountnr;
 	}
@@ -55,4 +58,7 @@ public class Account {
 		return entryList;
 	}
 
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
 }
