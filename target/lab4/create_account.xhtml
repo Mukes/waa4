@@ -12,21 +12,21 @@
 
             <h:form>
                 <div class="row">
-                <h:outputLabel for="account" styleClass="form-group col-xs-6">Account Number:</h:outputLabel>
-                <h:inputText id="account" value="#{createAccountBean.account.accountnumber}" styleClass="form-group col-xs-6"></h:inputText>
+                <h:outputLabel for="account" styleClass="form-group col-xs-3">Account Number:</h:outputLabel>
+                <h:inputText id="account" value="#{createAccountBean.account.accountnumber}" styleClass="form-group col-xs-3"></h:inputText>
                 </div>
                 <br />
                 <div class="row">
-                <h:outputLabel for="holder" styleClass="form-group col-xs-6">Holder:</h:outputLabel>
-                <h:inputText id="holder" value="#{createAccountBean.customerName}" styleClass="form-group col-xs-6"></h:inputText>
+                <h:outputLabel for="holder" styleClass="form-group col-xs-3">Holder:</h:outputLabel>
+                <h:inputText id="holder" value="#{createAccountBean.customerName}" styleClass="form-group col-xs-3"></h:inputText>
                 </div>
                 <br />
                 <div class="row">
                 <h:outputLabel for="balance" styleClass="form-group col-xs-6">Initial Balance:</h:outputLabel>
-                <h:inputText id="balance" value="#{createAccountBean.account.balance}" styleClass="form-group col-xs-6"></h:inputText>
+                <h:inputText id="balance" value="#{createAccountBean.account.balance}" styleClass="form-group col-xs-3"></h:inputText>
                 </div>
                 <br />
-                <h:commandButton action="#{createAccountBean.createAccount()}" value="Submit" styleClass="btn-info"></h:commandButton>
+                <h:commandButton action="#{createAccountBean.createAccount()}" value="Submit" styleClass="btn btn-primary"></h:commandButton>
             </h:form>
         </ui:define>
     </ui:composition>

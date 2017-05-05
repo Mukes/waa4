@@ -14,11 +14,12 @@
     <ui:composition template="template.xhtml">
         <ui:define name="content">
 
-            <h:form>
+            <h:form styleClass="center-block ">
                 <h:outputText  value="#{param['id']}"></h:outputText>
-                <h:outputLabel for="deposit" styleClass="form-group col-xs-6">Deposit Amount:</h:outputLabel>
-                <h:inputText id="deposit" value="#{depositBean.depositAmt}" styleClass="form-group col-xs-6"></h:inputText>
-                <br />
+                <div class="row">
+                <h:outputLabel for="deposit" styleClass="form-group col-xs-3">Deposit Amount:</h:outputLabel>
+                <h:inputText id="deposit" value="#{depositBean.depositAmt}" styleClass="form-group col-xs-3"></h:inputText>
+                </div>
                 <h:commandButton action="#{depositBean.deposit()}" value="Submit" styleClass="btn btn-primary"></h:commandButton>
             </h:form>
         </ui:define>

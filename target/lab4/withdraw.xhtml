@@ -15,10 +15,11 @@
         <ui:define name="content">
 
             <h:form>
-                <h:outputText  value="#{param['id']}"></h:outputText>
-                <h:outputLabel for="deposit" styleClass="form-group col-xs-6">Deposit Amount:</h:outputLabel>
-                <h:inputText id="deposit" value="#{withdrawBean.depositAmt}" styleClass="form-group col-xs-6"></h:inputText>
-                <br />
+                <div class="row">
+                    <h:outputText  value="#{param['id']}"></h:outputText>
+                    <h:outputLabel for="deposit" styleClass="form-group col-xs-3">Deposit Amount:</h:outputLabel>
+                    <h:inputText id="deposit" value="#{withdrawBean.depositAmt}" styleClass="form-group col-xs-3"></h:inputText>
+                </div>
                 <h:commandButton action="#{withdrawBean.withdraw()}" value="Submit" styleClass="btn btn-primary"></h:commandButton>
             </h:form>
         </ui:define>
