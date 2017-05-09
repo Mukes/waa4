@@ -4,6 +4,10 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
     <display-name>Archetype Created Web Application</display-name>
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/register-flow.xml</param-value>
+    </context-param>
     <welcome-file-list>
         <welcome-file>faces/list_account.xhtml</welcome-file>
     </welcome-file-list>
@@ -17,28 +21,27 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
     </servlet-mapping>
-
-    <servlet-mapping>
+    <!--<servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.jsf</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.faces</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
 
-    <context-param>
+    <!--<context-param>
         <param-name>javax.faces.CONFIG_FILES</param-name>
         <param-value>
             WEB-INF/faces-config.xml
-    </param-value>
+        </param-value>
     </context-param>
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
-    </context-param>
+    </context-param>-->
 </web-app>

@@ -7,7 +7,7 @@
     <navigation-rule>
         <from-view-id>faces/list_account.xhtml</from-view-id>
         <navigation-case>
-            <from-action>#{listBean.createAccount()}</from-action>
+            <from-action>#{navigationBean.createAccount()}</from-action>
             <from-outcome>create</from-outcome>
             <to-view-id>faces/create_account.xhtml</to-view-id>
         </navigation-case>

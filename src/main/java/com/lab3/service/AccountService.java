@@ -9,6 +9,7 @@ import com.lab3.jms.JMSSender;
 import com.lab3.logging.ILogger;
 import com.lab3.logging.Logger;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import java.util.Collection;
@@ -18,7 +19,7 @@ import java.util.Collection;
 
 
 @ManagedBean(name = "accountService")
-@SessionScoped
+@ApplicationScoped
 public class AccountService implements IAccountService {
 	private IAccountDAO accountDAO;
 	private ICurrencyConverter currencyConverter;
